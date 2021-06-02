@@ -453,3 +453,76 @@ body{
         font-size: 4em;
     }
 }
+
+@media only screen and (max-width: 350px) {
+    .titulop{
+        font-size: 3em;
+    }
+    .cielo-title{
+        font-size: 2.5em;
+    }
+    .humedad-title{
+        font-size: 2.5em;
+    }
+    .viento-title{
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    #main{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 35% 65%;
+    }
+
+    .lugar{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        }
+        .content-lugar{
+            margin: auto;
+            width: 80%;
+            height: 40px;
+            font-size: 2.2em;
+            }
+
+    .enviar{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        }
+        .content-enviar{
+            margin: auto;
+            width: 30%;
+            height: 40px;
+            font-size: 2.2em;
+            }
+
+    .container{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .redes{
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 500px){
+    #main{
+        grid-template-rows: 50% 50%;
+    }
+    .container{
+        grid-template-rows: 1fr;
+    }
+    .others-dates{
+        display: none;
+    }
+}
