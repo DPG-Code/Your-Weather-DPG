@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>App Clima</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel Prieto Gaviria">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/8fa26032e3.js" crossorigin="anonymous"></script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <div id="main" class="card">
+
+            <div id="card" class="dates">
+                <div class="temp">
+                    <h1 class="temp-text" id="temp">Temp</h1>
+                </div>
+                <div class="sub-dates">
+                    <div class="ubicacion">
+                        <p class="ubicacion-text" id="city">Ubicación</p>
+                    </div>
+                    <div class="hora">
+                        <p class="hora-text" id="date">date</p> <p class="hora-text" id="hour">00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="card" class="container">
+
+                <form id="search-form" class="buscador">
+                    <div class="titulo">
+                        <p class="titulop">Your Weather</p>
+                    </div>
+                    <div class="lugar searchbox"">
+                        <input id="searchbox" class="content-lugar"  type="text" placeholder="lugar">
+                    </div>
+                    <div class="enviar">
+                        <input class="content-enviar" type="submit">
+                    </div>
+                </form>
+
+                <div id="card" class="others-dates">
+                    <div class="container__cielo">
+                        <div class="cielo">
+                            <p class="cielo-title">CIELO</p>
+                            <p class="cielo-text" id="weather">tipo</p>
+                        </div>
+                    </div>
+                    <div class="container__humedad">
+                        <div class="humedad">
+                            <p class="humedad-title">HUMEDAD</p>
+                            <p class="humedad-text" id="humidity">porcentaje</p>
+                        </div>
+                    </div>
+                    <div class="container__viento">
+                        <div class="viento">
+                            <p class="viento-title">VIENTO</p>
+                            <p class="viento-text" id="wind">velocidad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="redes">
+                    <div class="container__redes">
+                        <form class="button-redes__container" action="mailto:prietogaviriadaniel@gmail.com" target="_blank">
+                            <button class="button-redes"><i class="fas fa-envelope"></i></button>
+                        </form>
+                        <form class="button-redes__container" action="https://github.com/DPG-Code" target="_blank">
+                            <button class="button-redes"><i class="fab fa-github"></i></button>
+                        </form>
+                        <form class="button-redes__container" action="https://www.linkedin.com/in/daniel-prieto-gaviria-167077207/" target="_blank">
+                            <button class="button-redes"><i class="fab fa-linkedin-in"></i></button>
+                        </form>
+                        <form class="button-redes__container" action="https://www.behance.net/danielprieto7" target="_blank">
+                            <button class="button-redes"><i class="fab fa-behance"></i></button>
+                        </form>
+                    </div>
+                    <div class="container__text-redes">
+                        <p class="text-redes"><span class="text-redes2">Powered By </span>Daniel Prieto Gaviria</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
