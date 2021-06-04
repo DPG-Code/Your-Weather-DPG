@@ -446,11 +446,9 @@ body{
     .hora-text{
         font-size: 3em;
     }
-
     .titulop{
         font-size: 5em;
     }
-
     .cielo-title{
         font-size: 3em;
     }
@@ -494,6 +492,17 @@ body{
     .viento-title{
         font-size: 2.5em;
     }
+    .button-redes__container{
+        width: 40px;
+        height: 40px;
+        margin: auto 3%;
+        }
+        .button-redes{
+            font-size: 35px;
+            }
+    .text-redes{
+        font-size: 1.5em;
+    }
 }
 
 @media only screen and (max-height: 700px) {
@@ -502,9 +511,11 @@ body{
         height: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 35% 65%;
+        grid-template-rows: 22% 75%;
     }
-
+    .titulop{
+        font-size: 3.5em;
+    }
     .lugar{
         width: 100%;
         margin: auto;
@@ -516,7 +527,6 @@ body{
             height: 40px;
             font-size: 2.2em;
             }
-
     .enviar{
         width: 100%;
         margin: auto;
@@ -528,15 +538,42 @@ body{
             height: 40px;
             font-size: 2.2em;
             }
+}
 
-    .container{
+@media only screen and (max-height: 600px) {
+    #main{
         width: 100%;
         height: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 35% 65%;
     }
-
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 55% 45%;
+    }
+    .titulop{
+        font-size: 3.5em;
+    }
+        .cielo-title{
+            font-size: 2.5em;
+        }
+        .cielo-text{
+            font-size: 2em;
+        }
+        .humedad-title{
+            font-size: 2.5em;
+        }
+        .humedad-text{
+            font-size: 2em;
+        }
+        .viento-title{
+            font-size: 2.5em;
+        }
+        .viento-text{
+            font-size: 2em;
+        }
     .redes{
         display: none;
     }
