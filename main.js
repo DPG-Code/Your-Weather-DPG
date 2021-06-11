@@ -22,9 +22,13 @@ async function search(query) {
     card.style.display = 'block';
     city.innerHTML = `${data.name}, ${data.sys.country}`;
     date.innerHTML = (new Date()).toLocaleDateString();
-    var hora = new Date();
-    var hora_actual = hora.getHours()+":"+hora.getMinutes()+":"+hora.getSeconds();
-    hour.innerHTML = hora_actual;
+
+    setInterval(function(){
+      var hora = new Date();
+      var hora_actual = hora.getHours()+":"+hora.getMinutes()+":"+hora.getSeconds();
+      hour.innerHTML = hora_actual;
+    },1000);
+
     temp.innerHTML = `${toCelsius(data.main.temp)}°c`;
     wind.innerHTML = `${data.wind.speed} m/s`;
     humidity.innerHTML = `${data.main.humidity}%`;
