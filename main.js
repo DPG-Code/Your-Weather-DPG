@@ -13,7 +13,7 @@ const sky = document.getElementById('sky');
 const humidity = document.getElementById('humidity');
 const wind = document.getElementById('wind');
 
-const video = document.getElementById('video');
+/*const video = document.getElementById('video');
 
 function uptadeVideo(data) {
   const temp = toCelsius(data.main.temp);
@@ -27,7 +27,7 @@ function uptadeVideo(data) {
     src = "img/winter.mp4"
   }
   video.src = src
-}
+}*/
 
 async function search(query) {
   try {
@@ -43,7 +43,7 @@ async function search(query) {
       hour.innerHTML = hora_actual;
     },1000);
 
-    uptadeVideo(data);
+    //uptadeVideo(data);
 
     sky.innerHTML = data.weather[0].description;
     wind.innerHTML = `${data.wind.speed} m/s`;
