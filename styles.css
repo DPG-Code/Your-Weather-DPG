@@ -4,43 +4,40 @@
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+main{
+    width: 100vw;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
 }
 
-#total{
+#video{
+    z-index: 50;
     width: 100%;
     height: 100%;
-    min-height: 600px;
-}
-
-#inicio{
-    width: 100%;
-    height: 100%;
+    min-height: 650px;
     position: absolute;
-    z-index: 100;
-    min-height: 600px;
-}
-.container__video{
-    width: 100%;
-    height: 100%;
-    z-index: 100;
+    display: flex;
     }
     video{
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
+    .shadow{
+        z-index: 100;
+        height: 100%;
+        width: 100%;
+        background-color: #00000030;
+    }
 
-#main{
+.inicio{
+    z-index: 200;
     width: 100%;
     height: 100%;
-    min-height: 600px;
+    min-height: 650px;
     font-size: 10px;
     position: absolute;
-    z-index: 200;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 25% 75%;
@@ -51,148 +48,116 @@ body{
 /* DATES ***************************************************************** */
 .dates{
     width: 100%;
-    text-align: center;
+    height: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.temp{
-    margin-left: 50px;
-    width: 70%;
-    text-align: center;
-    }
-    .temp-text{
-        text-align: left;
+    #temp{
+        margin: 0;
         color: #ffffff;
         font-family: 'Raleway', sans-serif;
         font-size: 8em;
+        font-weight: 700;
+        text-shadow: 5px 5px 10px #00000059;
+    }
+    #city{
+        margin: 0;
+        color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.2em;
+        font-weight: 700;
+        text-shadow: 5px 5px 10px #00000059;
+    }
+    #date{
+        margin: 0;
+        color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        text-shadow: 5px 5px 10px #00000059;
+    }
+    #hour{
+        margin: 0;
+        color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.2em;
+        font-weight: 600;
         text-shadow: 5px 5px 10px #00000059;
     }
 
-.sub-dates{
-    margin-left: 50px;
-    width: 70%;
-    text-align: center;
-    }
-    .ubicacion{
-        width: 100%;
-        text-align: center;
-        }
-        .ubicacion-text{
-            text-align: left;
-            color: #ffffff;
-            font-family: 'Raleway', sans-serif;
-            font-size: 2.2em;
-            font-weight: 700;
-            text-shadow: 5px 5px 10px #00000059;
-        }
-    .hora{
-        margin: auto;
-        width: 100%;
-        display: flex;
-        }
-        .hora-text{
-            margin: auto 10px;
-            text-align: left;
-            color: #ffffff;
-            font-family: 'Raleway', sans-serif;
-            font-size: 2.2em;
-            font-weight: 600;
-            text-shadow: 5px 5px 10px #00000059;
-        }
 
 
-
-/* CONTAINER ********************************************************************** */
-.container{
+/* RESULTS ********************************************************************** */
+.results{
     margin: auto;
     width: 90%;
     height: 90%;
-
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.589);
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
+    background: rgba(0, 0, 0, 0.300);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.500);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
     border-radius: 20px;
-
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 42% 42% 16%;
+    grid-template-rows: 45% 48% 7%;
 }
 
-
-
-/* SEARCH ***************************************************************** */
-.buscador{
-    font-size: 10px;
-    padding: 10px;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.titulo{
-    width: 100%;
-    margin: auto;
+#search-form{
     display: flex;
-    }
-    .titulo h1{
-        margin: auto;
+    flex-direction: column;
+}
+    #search-form p{
+        margin: auto auto 0 auto;
         text-align: center;
         font-family: 'Raleway', sans-serif;
         font-size: 3em;
-        font-weight: 500;
+        font-weight: 700;
         color: #ffffff;
         text-shadow: 5px 5px 10px #00000059;
     }
-
-.lugar{
-    width: 100%;
-    margin: auto;
-    display: flex;
+    #search-form h1{
+        margin: 0 auto auto auto;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-size: 4em;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 5px 5px 10px #00000059;
     }
-    .content-lugar{
+    #searchbox{
         margin: auto;
-        width: 80%;
-        height: 40px;
+        padding: 5px 0 5px 0;
+        width: 88%;
         text-align: center;
         font-family: 'Raleway', sans-serif;
         font-size: 2.5em;
+        font-weight: 500;
         color: #000000;
         caret-color: #38878c;
         background: rgba(255, 255, 255, 0.5);
-        box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.192);
-        backdrop-filter: blur( 5px );
-        -webkit-backdrop-filter: blur( 5px );
         border-radius: 20px;
         border: none;
         outline: none;
         }
-        .content-lugar::placeholder{
-            color: #000000;
-        }
 
-.enviar{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    }
-    .content-enviar{
+    #enviar{
         margin: auto;
+        padding: 5px 0 5px 0;
         width: 150px;
-        height: 40px;
         text-align: center;
         font-family: 'Raleway', sans-serif;
         font-size: 2em;
         font-weight: 500;
-        color: #38878c;
+        color: #000000;
         background: #ffffff;
-        box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.192);
-        backdrop-filter: blur( 5px );
-        -webkit-backdrop-filter: blur( 5px );
         border-radius: 18px;
         border: none;
         }
-        .content-enviar:hover{
+        #enviar:hover{
             cursor: pointer;
             color: #ffffff;
             background: #38878c;
@@ -200,20 +165,18 @@ body{
 
 
 
-/* OTHER DATES ***************************************************************** */
 .others-dates{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
 }
-
     .cielo{
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         }
-        .cielo-title{
+        .cielo h3{
             width: 50%;
             margin: auto;
             text-align: center;
@@ -222,7 +185,7 @@ body{
             font-size: 2em;
             font-weight: 700;
         }
-        .cielo-text{
+        .cielo p{
             width: 50%;
             margin: auto;
             text-align: center;
@@ -231,14 +194,13 @@ body{
             font-size: 2em;
             font-weight: 500;
         }
-
     .humedad{
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         }
-        .humedad-title{
+        .humedad h3{
             width: 50%;
             margin: auto;
             text-align: center;
@@ -247,7 +209,7 @@ body{
             font-size: 2em;
             font-weight: 700;
         }
-        .humedad-text{
+        .humedad p{
             width: 50%;
             margin: auto;
             text-align: center;
@@ -256,14 +218,13 @@ body{
             font-size: 2em;
             font-weight: 500;
         }
-
     .viento{
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         }
-        .viento-title{
+        .viento h3{
             width: 50%;
             margin: auto;
             text-align: center;
@@ -272,7 +233,7 @@ body{
             font-size: 2em;
             font-weight: 700;
         }
-        .viento-text{
+        .viento p{
             width: 50%;
             margin: auto;
             text-align: center;
@@ -284,58 +245,20 @@ body{
 
 
 
-/* REDES SOCIALES ***************************************************************** */
-
-.redes{
-    padding: 10px;
+.poweredBy{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
     background-color: #ffffff;
     border-radius: 15px;
-}
-
-.container__redes{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    justify-content: center;
-    align-items: center;
     }
-    .button-redes__container{
-        width: 40px;
-        height: 40px;
-        margin: auto 5%;
-        display: flex;
-        }
-        .button-redes{
-            margin: auto;
-            width: 100%;
-            height: 100%;
-            color: #000000;
-            background-color: transparent;
-            font-size: 30px;
-            border: none;
-            }
-            .button-redes:hover{
-                color: #38878c;
-                cursor: pointer;
-            }
-
-.container__text-redes{
-    width: 100%;
-    text-align: center;
-    }
-    .text-redes{
+    .poweredBy p{
         margin: auto;
-        color: #000000;
+        color: #38878c;
         font-family: 'Raleway', sans-serif;
         font-size: 1.5em;
-    }
-    .text-redes2{
-        color: #38878c;
         font-weight: 700;
+    }
+    .poweredBy p span{
+        color: #000000;
     }
 
 
@@ -343,141 +266,129 @@ body{
 
 
 /* RESPONSIVE ***************************************************************** */
-
-
-/* main */
-@media only screen and (min-width: 1250px) {
-    #main{
-        width: 100%;
-        height: 100%;
-        font-size: 10px;
+@media only screen and (min-width: 960px) {
+    main{
+        min-height: 500px;
+    }
+    #video{
+        min-height: 500px;
+        }
+    .inicio{
+        min-height: 500px;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 1fr;
     }
-}
 
-@media only screen and (min-width: 1500px) {
-    #main{
-        width: 100%;
-        height: 100%;
-        font-size: 10px;
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: 1fr;
+    .dates{
+        padding: 7.5%;
+        align-items: flex-start;
+        justify-content: flex-end;
     }
-}
-
-
-/* dates */
-@media only screen and (min-width: 450px) {
-    .ubicacion-text{
+    #temp{
+        font-size: 12em;
+    }
+    #city{
         font-size: 3em;
     }
-    .hora-text{
+    #date{
+        font-size: 3em;
+    }
+    #hour{
         font-size: 3em;
     }
 }
 
-@media only screen and (min-width: 1250px){
-    .dates{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+@media only screen and (min-width: 1280px) {
+    #temp{
+        font-size: 14em;
     }
-    .temp{
-        margin-left: 15px;
-        width: 50%;
-        position: absolute;
-        bottom: 20%;
-    }
-    .sub-dates{
-        margin-left: 15px;
-        width: 50%;
-        position: absolute;
-        bottom: 3%;
-    }
-    .temp-text{
-        font-size: 12vw;
-    }
-    .ubicacion-text{
-        font-size: 4vw;
-    }
-    .hora-text{
-        font-size: 3vw;
-    }
-}
-
-@media only screen and (min-width: 1500px){
-    .dates{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .temp{
-        margin-left: 15px;
-        width: 50%;
-        position: absolute;
-        bottom: 17%;
-    }
-    .sub-dates{
-        margin-left: 15px;
-        width: 50%;
-        position: absolute;
-        bottom: 3%;
-    }
-    .temp-text{
-        font-size: 25em;
-    }
-    .ubicacion-text{
-        font-size: 8em;
-    }
-    .hora-text{
+    #city{
         font-size: 5em;
     }
+    #date{
+        font-size: 5em;
+    }
+    #hour{
+        font-size: 5em;
+    }
+    .cielo h3{
+        font-size: 3em;
+    }
+    .cielo p{
+        font-size: 3em;
+    }
+
+    .humedad h3{
+        font-size: 3em;
+    }
+    .humedad p{
+        font-size: 3em;
+    }
+
+    .viento h3{
+        font-size: 3em;
+    }
+    .viento p{
+        font-size: 3em;
+    }
+
+    .poweredBy{
+        border-radius: 25px;
+        }
+        .poweredBy p{
+            font-size: 2.2em;
+        }
 }
 
-/* SEARCH */
-@media only screen and (min-width: 450px){
-.titulo h1{
+@media only screen and (min-width: 1920px) {
+    #temp{
+        font-size: 20em;
+    }
+    #city{
+        font-size: 6em;
+    }
+    #date{
+        font-size: 6em;
+    }
+    #hour{
+        font-size: 6em;
+    }
+    .cielo h3{
+        font-size: 4em;
+    }
+    .cielo p{
         font-size: 4em;
     }
 
-    .content-lugar{
-        width: 80%;
-        height: 45px;
+    .humedad h3{
+        font-size: 4em;
+    }
+    .humedad p{
+        font-size: 4em;
+    }
+
+    .viento h3{
+        font-size: 4em;
+    }
+    .viento p{
+        font-size: 4em;
+    }
+    
+    #search-form p{
+        font-size: 5em;
+    }
+    #search-form h1{
+        font-size: 6em;
+    }
+    #searchbox{
+        font-size: 4em;
+        border-radius: 22px;
+        }
+
+    #enviar{
+        width: 200px;
         font-size: 3em;
         border-radius: 20px;
         }
-
-    .content-enviar{
-        width: 250px;
-        height: 45px;
-        font-size: 2.5em;
-        border-radius: 18px;
-        }
-}
-
-/* OTHER DATES */
-@media only screen and (min-width: 450px){
-.cielo-title{
-        font-size: 3em;
-    }
-    .cielo-text{
-        font-size: 2.5em;
-    }
-
-.humedad-title{
-        font-size: 3em;
-    }
-    .humedad-text{
-        font-size: 2.5em;
-    }
-
-.viento-title{
-        font-size: 3em;
-    }
-    .viento-text{
-        font-size: 2.5em;
-    }
 }

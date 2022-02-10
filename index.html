@@ -1,99 +1,63 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>App Clima</title>
+        <title>Your Weather</title>
         <meta charset="utf-8">
         <meta name="author" content="Daniel Prieto Gaviria">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/8fa26032e3.js" crossorigin="anonymous"></script>
-        <script src="main.js" defer></script>
     </head>
     <body>
-        <div id="total">
+        <main>
 
-            <div id="inicio">
-                <div class="container__video">
-                    <video muted autoplay loop src="img/beachvideo.mp4"></video>
-                </div>
+            <div id="video">
+                <div class="shadow"></div>
+                <video id="video" muted autoplay loop src="img/beachvideo.mp4"></video>
             </div>
 
-            <div id="main" class="card">
+            <div class="inicio">
 
                 <div id="card" class="dates">
-                    <div class="temp">
-                        <h1 class="temp-text" id="temp">Temp</h1>
-                    </div>
-                    <div class="sub-dates">
-                        <div class="ubicacion">
-                            <p class="ubicacion-text" id="city">Ubicación</p>
-                        </div>
-                        <div class="hora">
-                            <p class="hora-text" id="date">Date</p> <p class="hora-text" id="hour">00:00</p>
-                        </div>
-                    </div>
+                    <h1 id="temp">0</h1>
+                    <p id="city">Ubicación</p>
+                    <p id="date">Date</p>
+                    <p id="hour">00:00</p>
                 </div>
 
-                <div id="card" class="container">
-
-                    <form id="search-form" class="buscador">
-                        <div class="titulo">
-                            <h1>Your Weather</h1>
-                        </div>
-                        <div class="lugar searchbox"">
-                            <input id="searchbox" class="content-lugar"  type="text" placeholder="lugar">
-                        </div>
-                        <div class="enviar">
-                            <input class="content-enviar" type="submit">
-                        </div>
+                <div id="card" class="results">
+                    <form id="search-form">
+                        <p>YOUR</h1>
+                        <h1>WEATHER</h1>
+                        <input id="searchbox" type="text" placeholder="lugar">
+                        <input id="enviar" type="submit">
                     </form>
 
                     <div id="card" class="others-dates">
-                        <div class="container__cielo">
-                            <div class="cielo">
-                                <p class="cielo-title">CIELO</p>
-                                <p class="cielo-text" id="weather">tipo</p>
-                            </div>
+                        <div class="cielo">
+                            <h3>CIELO</h3>
+                            <p id="sky">?</p>
                         </div>
-                        <div class="container__humedad">
-                            <div class="humedad">
-                                <p class="humedad-title">HUMEDAD</p>
-                                <p class="humedad-text" id="humidity">porcentaje</p>
-                            </div>
+                        <div class="humedad">
+                            <h3>HUMEDAD</h3>
+                            <p id="humidity">%</p>
                         </div>
-                        <div class="container__viento">
-                            <div class="viento">
-                                <p class="viento-title">VIENTO</p>
-                                <p class="viento-text" id="wind">velocidad</p>
-                            </div>
+                        <div class="viento">
+                            <h3>VIENTO</h3>
+                            <p id="wind">/ms</p>
                         </div>
                     </div>
 
-                    <div class="redes">
-                        <div class="container__redes">
-                            <form class="button-redes__container" action="mailto:prietogaviriadaniel@gmail.com" target="_blank">
-                                <button class="button-redes"><i class="fas fa-envelope"></i></button>
-                            </form>
-                            <form class="button-redes__container" action="https://github.com/DPG-Code" target="_blank">
-                                <button class="button-redes"><i class="fab fa-github"></i></button>
-                            </form>
-                            <form class="button-redes__container" action="https://www.linkedin.com/in/daniel-prieto-gaviria-167077207/" target="_blank">
-                                <button class="button-redes"><i class="fab fa-linkedin-in"></i></button>
-                            </form>
-                            <form class="button-redes__container" action="https://www.behance.net/danielprieto7" target="_blank">
-                                <button class="button-redes"><i class="fab fa-behance"></i></button>
-                            </form>
-                        </div>
-                        <div class="container__text-redes">
-                            <p class="text-redes"><span class="text-redes2">Powered By </span>Daniel Prieto Gaviria</p>
-                        </div>
+                    <div class="poweredBy">
+                        <p><span>Powered By </span>Daniel Prieto Gaviria</p>
                     </div>
-
                 </div>
             </div>
-        </div>
 
+        </main>
+        <script src="main.js" defer></script>
     </body>
 </html>
