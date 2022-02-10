@@ -4,7 +4,6 @@ const api = {
 }
 
 const card = document.getElementById('card');
-const video = document.getElementById('video');
 
 const temp = document.getElementById('temp');
 const city = document.getElementById('city');
@@ -14,16 +13,17 @@ const sky = document.getElementById('sky');
 const humidity = document.getElementById('humidity');
 const wind = document.getElementById('wind');
 
+const video = document.getElementById('video');
 
 function uptadeVideo(data) {
   const temp = toCelsius(data.main.temp);
-  let src = "img/beachvideo.mp4";
+  let src = "";
 
-  if (temp > 27) {
+  if (temp >= 27) {
     src = "img/summer.mp4"
-  }else if (temp < 27 && temp > 16) {
+  }else if (temp < 27 && temp >= 12) {
     src = "img/spring.mp4"
-  }else if (temp < 16) {
+  }else if (temp < 12) {
     src = "img/winter.mp4"
   }
   video.src = src
@@ -43,11 +43,11 @@ async function search(query) {
       hour.innerHTML = hora_actual;
     },1000);
 
+    uptadeVideo(data);
+
     sky.innerHTML = data.weather[0].description;
     wind.innerHTML = `${data.wind.speed} m/s`;
     humidity.innerHTML = `${data.main.humidity}%`;
-
-    uptadeVideo(data);
   } 
   catch (err) {
     console.log(err);

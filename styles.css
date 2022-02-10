@@ -11,7 +11,7 @@ main{
     display: flex;
 }
 
-#video{
+.container-video{
     z-index: 50;
     width: 100%;
     height: 100%;
@@ -29,6 +29,7 @@ main{
         height: 100%;
         width: 100%;
         background-color: #00000030;
+        position: absolute;
     }
 
 .inicio{
@@ -270,7 +271,7 @@ main{
     main{
         min-height: 500px;
     }
-    #video{
+    .container-video{
         min-height: 500px;
         }
     .inicio{
