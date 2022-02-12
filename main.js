@@ -13,21 +13,21 @@ const sky = document.getElementById('sky');
 const humidity = document.getElementById('humidity');
 const wind = document.getElementById('wind');
 
-/*const video = document.getElementById('video');
+const img = document.getElementById('back-img');
 
-function uptadeVideo(data) {
+function uptadeImg(data) {
   const temp = toCelsius(data.main.temp);
   let src = "";
 
   if (temp >= 27) {
-    src = "img/summer.mp4"
+    src = "img/hot.jpg"
   }else if (temp < 27 && temp >= 12) {
-    src = "img/spring.mp4"
+    src = "img/tempered.jpg"
   }else if (temp < 12) {
-    src = "img/winter.mp4"
+    src = "img/cold.jpg"
   }
-  video.src = src
-}*/
+  img.src = src
+}
 
 async function search(query) {
   try {
@@ -43,7 +43,7 @@ async function search(query) {
       hour.innerHTML = hora_actual;
     },1000);
 
-    //uptadeVideo(data);
+    uptadeImg(data);
 
     sky.innerHTML = data.weather[0].description;
     wind.innerHTML = `${data.wind.speed} m/s`;

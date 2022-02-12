@@ -19,10 +19,11 @@ main{
     position: absolute;
     display: flex;
     }
-    video{
+    #back-img{
         height: 100%;
         width: 100%;
         object-fit: cover;
+        object-position: 50% 100%;
     }
     .shadow{
         z-index: 100;
