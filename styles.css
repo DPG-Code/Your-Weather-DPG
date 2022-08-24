@@ -122,7 +122,7 @@ main{
         text-shadow: 5px 5px 10px #00000059;
     }
     #search-form h1{
-        margin: 0 auto auto auto;
+        margin: auto;
         text-align: center;
         font-family: 'Raleway', sans-serif;
         font-size: 4em;
